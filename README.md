@@ -17,5 +17,5 @@ nvcc -arch=compute_XX -code=sm_XX -o <filename> cuda_perumalla_v4.cu -Xcompiler 
 PS1: Change compute_XX and sm_XX to your device specifications. We have used compute_20, sm_21 for GT 720M and GTX 460 v2, compute_30, sm_30 fo GTX 680 and compute_35, sm_35 for GTX Titan Black.
 
 PS2: If the CUDA implementation is not working on your machine, check the SDK version. We tested it on SDK 7.5, and for SDK 4.2 we need to:
-- Comment ##include <thrust/execution_policy.h> directive
+- Comment #include \<thrust/execution_policy.h> directive
 - Remove all thrust::host and thrust::device arguments in thrust calls.
